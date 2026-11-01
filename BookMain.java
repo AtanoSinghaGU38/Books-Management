@@ -1,3 +1,5 @@
+import java.util.HashMap;
+import java.util.Map;
 import java.util.ArrayList;
 
 public class BookMain {
@@ -39,5 +41,22 @@ public class BookMain {
         }
     }
     
+    //next part, implementing hashmap to search the books
+    Map<Integer, Book> hashMap = new HashMap<>();
+
+        hashMap.put(book1.getSerial(), book1);
+        hashMap.put(book2.getSerial(), book2);
+        hashMap.put(book3.getSerial(), book3);
+        hashMap.put(book4.getSerial(), book4);
+
+        int targetId=3;
+        Book result=hashMap.get(targetId);
+        if(result!=null){
+            System.out.println("Item found!");
+            System.out.println(result);
+        }
+        else{
+            System.out.println("Item not found!");
+        }
    } 
 }
